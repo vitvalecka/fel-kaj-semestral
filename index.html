@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="utf-8" />
+    <title>Game of (js)Life</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+
+    <!-- jQuery Audio Widget header content -->
+    <script src="audioplayerengine/jquery.js"></script>
+    <script src="audioplayerengine/amazingaudioplayer.js"></script>
+    <link rel="stylesheet" type="text/css" href="audioplayerengine/initaudioplayer-1.css">
+    <script src="audioplayerengine/initaudioplayer-1.js"></script>
+    <!-- end of jQAW header content -->
+</head>
+<body>
+    <div class="page">
+        <header>
+            <img id="logo" src="image/gol-logo-www.svg" alt="Game of JSLife logo">
+        </header>
+        <div id="centralsection">
+            <main id="main">
+                <canvas id="gameCanvas"></canvas>
+            </main>
+            <aside>
+                <div id="generationmonitor">
+                    <p>Aktuální generace: <span id="generationSpan">0</span></p>
+                </div>
+                <input type="button" id="startstop" onclick="automate()" value="Start" />
+                <input type="button" id="onestep" onclick="applyRules()" value="Jeden krok" ><br/>
+                <input type="button" id="random" onclick="loadRandomCanvas()" value="Vygeneruj náhodné pole"/><br/>
+                <textarea id="dropzone">Přetáhněte sem soubor s&nbsp;mapou...</textarea>
+                <p><a href="help.html">Jak na to?</a></p>
+
+                <div>
+                    <h4>Nastavení</h4>
+                    
+                    <p>Rozměry plánu - počet polí</p>
+                    <label id="label-cellsX">Šířka:</label> <input type="number" id="cellsX" value="83" min="5" max="100" step="1">
+                    <label id="label-cellsY">Výška:</label> <input type="number" id="cellsY" value="40" min="5" max="100" step="1"><br/>
+                    <input type="button" id="redraw" value="Překresli mapu" onclick="initializeMap()"/>
+
+                    <p>Rychlost animace</p>
+                    <label id="label-fps">FPS:</label> <input type="number" id="fps" value="3" min="0.1" max="20" step="0.1"><br/>
+
+                </div>
+
+                <div>
+                    <h4>Přehrávač</h4>
+                    <!-- jQuery Audio Player widget -->
+                    <div id="amazingaudioplayer-1">
+                        <ul class="amazingaudioplayer-audios">
+                            <li data-artist="Wintergatan" data-title="Starmachine2000" data-album="Wintergatan - Full Album" data-info="" data-image="audios/cover.jpg" data-duration="243">
+                                <div class="amazingaudioplayer-source" data-src="audios/audio1.mp3" data-type="audio/mpeg"></div>
+                            </li>
+                            <li data-artist="Wintergatan" data-title="Valentine" data-album="Wintergatan - Full Album" data-info="" data-image="audios/cover.jpg" data-duration="239">
+                                <div class="amazingaudioplayer-source" data-src="audios/audio2.mp3" data-type="audio/mpeg"></div>
+                            </li>
+                            <li data-artist="Wintergatan" data-title="Sommarfågel" data-album="Wintergatan - Full Album" data-info="" data-image="audios/cover.jpg" data-duration="233">
+                                <div class="amazingaudioplayer-source" data-src="audios/audio3.mp3" data-type="audio/mpeg"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of widget -->
+                </div>
+            </aside>
+        </div>
+        <footer>
+            <div id="copyright">&copy;2018 Vít Valečka</div>
+            <div id="help"><a href="help.html">Nápověda</a></div>
+        </footer>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+</html>

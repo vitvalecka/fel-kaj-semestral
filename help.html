@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="utf-8" />
+    <title>Nápověda - Game of (js)Life</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+</head>
+<body id="body-help">
+    <div class="help-page">
+        <header>
+            <img id="logo" src="image/gol-logo-www.svg" alt="Game of JSLife logo">
+        </header>
+        <div id="centralsection">
+            <main id="main-help">
+                <div class="helptext">
+                    <p id="goback"><a href="index.html">&#8592; Zpět</a></p>
+
+                    <h2>Co je Game of Life?</h2>
+                    <p>Hra života nebo také život (anglicky Game of Life či pouze Life) je dvoustavový, dvourozměrný celulární automat, který svým chováním připomíná vývoj společenství živých organismů. Odehrává se na matici buněk, jejíž stav předurčuje podobu hry v následujícím kroku. Uživatel pouze určí výchozí konfiguraci a dále již hra běží automaticky podle předem daných pravidel. Čas je ve hře diskrétní, při každém uplatnění pravidel se posune o jednotku. Hra života se od podobných celulárních automatů liší v pravidlech pro zrod nových buněk a jejich přežití. Kořeny hry života sahají do roku 1940, kdy maďarský matematik John von Neumann přišel s konceptem celulárních automatů. Hru života jako takovou však vymyslel až britský matematik John Horton Conway v roce 1970. V průběhu hry vznikají různé tvary, které se dělí do kategorií jako jsou zátiší, oscilátory, děla a další. Hra života je příkladem systému, kde z jednoduchých pravidel vzniká komplexní chování – objevují se zde tzv. emergentní struktury. Více informací naleznete například <a href="https://cs.wikipedia.org/wiki/Hra_života" target="_blank">na Wikipedii</a>.</p>
+                    
+                    <h2>Základní ovládání</h2>
+                    <p><b>Síť pro buňky</b> - Jedná se o čtvercovou síť, do které lze kliknutím levého tlačítka myši přidávat (nebo ubírat) živé buňky. Živá buňka má černou barvu, mrtvá bílou. Opakovaným klikáním na jednu buňku lze cyklovat mezi stavem živá/mrtvá.</p>
+                    <p><b>Start (tlačítko)</b> - Spustí automatický běh simulace s v nastavení zadanou frekvencí kroků za vteřinu. Je li spuštěna simulace, tlačítko se změní na&nbsp;"Stop".</p>
+                    <p><b>Stop (tlačítko)</b> - Pozastaví simulaci na aktuálním kroku až do opětovného spuštění pomocí tlačítka "Start" nebo "Jeden krok". Po zastavení simulace se tlačítko změní na "Start".</p>
+                    <p><b>Jeden krok (tlačítko)</b> - Místo spuštění automatického běhu simulace provede vyhodnocení a vykreslení pouze jednoho (následujícího) kroku.</p>
+                    <p><b>Vygeneruj náhodné pole (tlačítko)</b> - Náhodně rozmístí po aktuálním plánu živé a mrtvé buňky.</p>
+                    
+                    <h2>Vložení vlastního souboru s mapou</h2>
+                    <p>Aplikace umožňuje přetažení vlastního textového souboru s mapou do vyznačené oblasti, čímž dojde k nahrání této mapy a jejímu zobrazení. Na takto nahrané mapě lze provádět simulace.</p>
+                    <p>Tento textový soubor ale musí mít určitý formát. Konkrétně:</p>
+                    <ul>
+                        <li>na prvním řádku se nachází celé číslo udávající počet sloupců</li>
+                        <li>na druhém řásku se nachází celé číslo udávající počet řádků</li>
+                        <li>následují řádky reprezentující jednotlivé řádky mapy - na každém řádku je sekvence 0 a 1 reprezentujících mrtvé (0) a živé (1) buňky (nejsou odděleny mezeramy, následují bezprostředně po sobě)</li>
+                        <li>jednotlivé řádky mapy odpovídají řádkům nul a jedniček v souboru</li>
+                    </ul>
+                    <p>Níže přikládáme několik ukázkových souborů:</p>
+                    <ul>
+                        <li><a href="demo-maps/benatske-rolety.txt" target="_blank">Benátské rolety</a></li>
+                        <li><a href="demo-maps/blikac.txt" target="_blank">Blikač</a></li>
+                        <li><a href="demo-maps/kralici.txt" target="_blank">Králíci</a></li>
+                        <li><a href="demo-maps/majak.txt" target="_blank">Maják</a></li>
+                        <li><a href="demo-maps/r-pentomino.txt" target="_blank">R-pentomino</a></li>
+                        <li><a href="demo-maps/ropucha.txt" target="_blank">Ropucha</a></li>
+                        <li><a href="demo-maps/zalud.txt" target="_blank">Žalud</a></li>
+                    </ul>
+
+                    <h2>Nastavení</h2>
+                    <p><b>Rozměry pole</b> - Zde lze nastavit rozměry vykreslované mapy - konkrétně pak její šířku (počet sloupců) a výšku (počet řádků). Po nastavení požadované velikosti je nutné kliknout na tlačítko "Překresli mapu". Pozor! Kliknutím na toto tlačítko dojde ke smazání celé mapy a bude třeba ji vytvořit znovu!<br/>
+                    Minimální velikost je 5x5, maximální pak 200x200.</p>
+                    <p><b>Rachlost animace (FPS)</b> - Zde lze nastavit kolik kroků proběhne za jednu vteřinu během automatického běhu programu. Při reálném běhu bude počet provedených kroků za vteřinu menší nebo roven tomuto číslu - v případě velkých map může být výpočetní náročnost příliš velká na to, aby bylo možné udržet požadovanou frekvenci.<br/>
+                    Minimální rychlost je 0,1 (1 snímek za 10 sekund), maximální pak 30 kroků/s.</p>
+
+                    <h2>Přehrávač</h2>
+                    <p>Zpříjemněte si své "buněčné hrátky" trochou hudby. Jako podkresová hudba je k dispozici několik skladeb! SStačí si vybrat v přehrávači po sekcí Nastavení. Je možné přehrávání pauzovat, skočit na následující/předchozí skladbu, nechat hudbu hrát v nekonečné smyčce...</p>
+                </div>
+            </main>
+        </div>
+        <footer>
+            &copy;2018 Vít Valečka
+        </footer>
+    </div>
+</body>
+</html>

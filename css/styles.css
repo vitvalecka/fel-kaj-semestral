@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    padding: 0;
+	color: #444445;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+div.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #444445;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    height: 5em;
+    padding-left: 1em;
+}
+
+header img#logo {
+	height: 70%;
+}
+
+div#centralsection {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: stretch;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+aside {
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+    padding: 1em;
+    width: 15em;
+}
+
+aside input[type=button] {
+	transition: all 0.25s ease-in-out;
+	background: #eaeaea;
+	border: none;
+	height: 3em;
+}
+
+aside input[type=button]:hover {
+	background: #444445;
+	color: #fff;
+}
+
+aside input[type=button]#startstop {
+	font-weight: bold;
+}
+
+aside input[type=button]#startstop, aside input[type=button]#onestep {
+	width: 49%;
+}
+
+aside input[type=button]#random {
+	width: 100%;
+	margin-top: .2em;
+	margin-bottom: 2em;
+}
+
+aside textarea#dropzone {
+	width: 100%;
+	border: dashed .1em #939598;
+	background: #eaeaea;
+	margin: 0;
+	resize: none;
+}
+
+aside textarea + p, aside textarea + p a {
+	margin-top: 0;
+	text-decoration: none;
+	font-style: italic;
+	font-size: 85%;
+	text-align: right;
+	color: #444445;
+}
+
+aside h4 + p, aside input[type=button]#redraw + p {
+	font-weight: bold;
+}
+
+aside input[type=number] {
+	width: 3.5em;
+}
+
+aside input[type=number]#cellsX {
+	margin-right: 1em;
+}
+
+aside input[type=button]#redraw {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+aside input[type=number]#fps {
+	width: 5em;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+	background-color: #444445;
+	color: #ffffff;
+    height: 3em;
+    padding-left: 1em;
+}
+
+footer div#copyright {
+	width: 49%;
+	text-align: left;
+}
+
+footer div#help {
+	width: 49%;
+	text-align: right;
+}
+
+footer div#help a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    div#centralsection {
+        flex-direction: column;
+    }
+
+    div#centralsection main {
+        order: 1;
+    }
+
+    div#centralsection aside {
+        order: 2;
+        width: 100%;
+    }
+}
+
+/* HELP PAGE */
+
+body#body-help {
+    margin: 0;
+	padding: 0;
+	overflow: auto;
+	color: #444445;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+div.help-page {
+    display: flex;
+    flex-direction: column;
+	min-height: 100vh;
+	background: #eaeaea;
+}
+
+div.help-page div#centralsection {
+	justify-content: center;
+}
+
+div.help-page main {
+	background: #ffffff;
+	max-width: 60em;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+div.help-page main h2 {
+	text-align: left;
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+
+div.help-page main p {
+	text-align: justify;
+}
+
+div.help-page main p#goback {
+	text-align: left;
+}
+
+div.help-page main p#goback a {
+	text-decoration: none;
+	color: #444445;
+}
+
+div.helptext {
+	text-align: left !important;
+	margin-bottom: 2em;
+}
