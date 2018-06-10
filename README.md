@@ -2,7 +2,7 @@
 
 ## Cíl práce
 
-Vytvořit 2D celulární simulátor Game of Life využívající standardní sadu pravidel. Více o celulárních simulátorech najdete v [nápovědě této aplikace](https://vitvalecka.github.io/fel-kaj-semestral/help.html), nebo na [Wikipediig](https://cs.wikipedia.org/wiki/Hra_života).
+Vytvořit 2D celulární simulátor Game of Life využívající standardní sadu pravidel. Více o celulárních simulátorech najdete v [nápovědě této aplikace](https://vitvalecka.github.io/fel-kaj-semestral/help.html), nebo na [Wikipedii](https://cs.wikipedia.org/wiki/Hra_života).
 
 ## Postup
 
