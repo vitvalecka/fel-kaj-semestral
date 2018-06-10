@@ -4,6 +4,10 @@
 
 Vytvořit 2D celulární simulátor Game of Life využívající standardní sadu pravidel. Více o celulárních simulátorech najdete v [nápovědě této aplikace](https://vitvalecka.github.io/fel-kaj-semestral/help.html), nebo na [Wikipedii](https://cs.wikipedia.org/wiki/Hra_života).
 
+## Aplikace
+
+Aplikace je online k dispozici zde: https://vitvalecka.github.io/fel-kaj-semestral/
+
 ## Postup
 
 Game of Life jsem psal již několikrát v různých jazycích (Pascal/Delphi, C++/Qt, Java, .NET), proto jsem se rozhodl začít již odzkoušeným kódem a postupně převádět jednotlivé části, dokud nezískám kompletní program, nad kterým můžu dále stavět.
