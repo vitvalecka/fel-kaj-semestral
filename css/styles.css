@@ -23,7 +23,7 @@ header {
 }
 
 header img#logo {
-	height: 70%;
+	width: 12em;
 }
 
 div#centralsection {
@@ -157,6 +157,38 @@ footer div#help a {
         order: 2;
         width: 100%;
     }
+}
+
+/* AUDIO PLAYER */
+
+div#audioplayer #playlist, audio {
+	width: 100%;
+	padding: .2em;
+}
+
+div#audioplayer .active a {
+	color: #fff;
+	background: #444445;
+}
+
+div#audioplayer ul {
+	list-style-type: none;
+	background: #eaeaea;
+	font-size: 70%;
+}
+
+div#audioplayer li a {
+	color: #444445;
+	background: #eaeaea;
+	padding: 5px;
+	display: block;
+	text-decoration: none;
+	transition: all .3s ease-in-out;
+}
+
+div#audioplayer li a:hover {
+	color: #fff;
+	background: #444445;
 }
 
 /* HELP PAGE */

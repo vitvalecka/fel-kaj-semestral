@@ -5,7 +5,13 @@
     <title>Game of (js)Life</title>
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <!-- jQuery Audio Widget header content -->
+    <script src="audioplayerengine/jquery.js"></script>
+    <script src="audioplayerengine/amazingaudioplayer.js"></script>
+    <link rel="stylesheet" type="text/css" href="audioplayerengine/initaudioplayer-1.css">
+    <script src="audioplayerengine/initaudioplayer-1.js"></script>
+    <!-- end of jQAW header content -->
 </head>
 <body>
     <div class="page">
@@ -41,29 +47,21 @@
 
                 <div>
                     <h4>Přehrávač</h4>
-                    <div id="audioplayer">
-                        <audio id="audio" preload="auto" tabindex="0" controls="controls">
-                            <source src="audios/audio1.mp3" type="audio/mpeg">
-                            Váš prohlížeč nepodporuje hudební přehrávač.
-                        </audio>
-                        <ul id="playlist">
-                            <li class="active">
-                                <a href="audios/audio1.mp3">
-                                    Starmachine2000
-                                </a>
+                    <!-- jQuery Audio Player widget -->
+                    <div id="amazingaudioplayer-1">
+                        <ul class="amazingaudioplayer-audios">
+                            <li data-artist="Wintergatan" data-title="Starmachine2000" data-album="Wintergatan - Full Album" data-info="" data-image="audios/cover.jpg" data-duration="243">
+                                <div class="amazingaudioplayer-source" data-src="audios/audio1.mp3" data-type="audio/mpeg"></div>
                             </li>
-                            <li>
-                                <a href="audios/audio2.mp3">
-                                    Valentine
-                                </a>
+                            <li data-artist="Wintergatan" data-title="Valentine" data-album="Wintergatan - Full Album" data-info="" data-image="audios/cover.jpg" data-duration="239">
+                                <div class="amazingaudioplayer-source" data-src="audios/audio2.mp3" data-type="audio/mpeg"></div>
                             </li>
-                            <li>
-                                <a href="audios/audio3.mp3">
-                                    Sommarfågel
-                                </a>
+                            <li data-artist="Wintergatan" data-title="Sommarfågel" data-album="Wintergatan - Full Album" data-info="" data-image="audios/cover.jpg" data-duration="233">
+                                <div class="amazingaudioplayer-source" data-src="audios/audio3.mp3" data-type="audio/mpeg"></div>
                             </li>
                         </ul>
                     </div>
+                    <!-- end of widget -->
                 </div>
             </aside>
         </div>

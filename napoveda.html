@@ -9,7 +9,7 @@
 <body id="body-help">
     <div class="help-page">
         <header>
-            <img id="logo" src="image/gol-logo-www.svg" alt="Game of JSLife logo">
+            <a href="index.html"><img id="logo" src="image/gol-logo-www.svg" alt="Game of JSLife logo"></a>
         </header>
         <div id="centralsection">
             <main id="main-help">
@@ -26,14 +26,13 @@
                     <p><b>Jeden krok (tlačítko)</b> - Místo spuštění automatického běhu simulace provede vyhodnocení a vykreslení pouze jednoho (následujícího) kroku.</p>
                     <p><b>Vygeneruj náhodné pole (tlačítko)</b> - Náhodně rozmístí po aktuálním plánu živé a mrtvé buňky.</p>
                     
-                    <h2>Vložení vlastního souboru s mapou</h2>
+                    <h2 id="vlastni-soubor">Vložení vlastního souboru s mapou</h2>
                     <p>Aplikace umožňuje přetažení vlastního textového souboru s mapou do vyznačené oblasti, čímž dojde k nahrání této mapy a jejímu zobrazení. Na takto nahrané mapě lze provádět simulace.</p>
                     <p>Tento textový soubor ale musí mít určitý formát. Konkrétně:</p>
                     <ul>
                         <li>na prvním řádku se nachází celé číslo udávající počet sloupců</li>
-                        <li>na druhém řásku se nachází celé číslo udávající počet řádků</li>
-                        <li>následují řádky reprezentující jednotlivé řádky mapy - na každém řádku je sekvence 0 a 1 reprezentujících mrtvé (0) a živé (1) buňky (nejsou odděleny mezeramy, následují bezprostředně po sobě)</li>
-                        <li>jednotlivé řádky mapy odpovídají řádkům nul a jedniček v souboru</li>
+                        <li>na druhém řádku se nachází celé číslo udávající počet řádků</li>
+                        <li>následují řádky reprezentující jednotlivé řádky mapy - na každém je sekvence 0 a 1 reprezentujících mrtvé (0) a živé (1) buňky (nejsou odděleny mezeramy, následují bezprostředně po sobě)</li>
                     </ul>
                     <p>Níže přikládáme několik ukázkových souborů:</p>
                     <ul>
@@ -58,7 +57,7 @@
             </main>
         </div>
         <footer>
-            &copy;2018 Vít Valečka
+            &copy;<script>document.write(new Date().getFullYear());</script> Vít Valečka
         </footer>
     </div>
 </body>
