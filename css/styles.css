@@ -150,7 +150,8 @@ footer div#help a {
     }
 
     div#centralsection main {
-        order: 1;
+		order: 1;
+		height: 65vh;
     }
 
     div#centralsection aside {

@@ -21,31 +21,31 @@ canvas.addEventListener('click', onCanvasClick, false);
 
 
 // buňka
-class Cell {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.size = cellSize;
-        this.isAlive = false;
-    }
+function Cell(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = cellSize;
+    this.isAlive = false;
 
     // vykreslení buňky
-    draw() {
+    this.draw = function() {
         ctx.beginPath();
         ctx.rect(this.x * this.size, this.y * this.size, this.size, this.size);
         ctx.strokeStyle = "#000";
         ctx.stroke();
         ctx.closePath();
+
         if (this.isAlive) {
             ctx.fillStyle = "#000";
-        }
-        else {
+        } else {
             ctx.fillStyle = "#f3f3f3";
         }
+
         ctx.fillRect(this.x * this.size, this.y * this.size, this.size, this.size);
         ctx.stroke();
     }
 }
+
 
 // zjistí, jak velký prostor je k dispozici pro canvas a podle toho nastaví jeho velikost
 // + pokud bylo v canvasu něco nakresleno, tak to smaže
