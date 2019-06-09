@@ -2,6 +2,7 @@ CACHE MANIFEST
 
 js/jquery-1.11.2.min.js
 js/game.js
+https://fonts.googleapis.com/css?family=Titillium+Web
 image/gol-logo-www.svg
 css/styles.css
 audios/audio1.mp3
