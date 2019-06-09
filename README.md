@@ -18,7 +18,7 @@ Druhé v pořadí bylo implementováno generování náhodného hracího plánu,
 
 Jako poslední funkcionalita byl implementován drag'n'drop pro textové soubory s předpisem mapy. Zde byla implementace obtížnější.
 
-V průběhu testování jsem pak pro zkrácení dlouhé chvíle poslouchal hudbu, a tak jsem se rozhodl do aplikace přidat ještě přehrávač. Ten je implementován za pomoci [jQuery Audio Player](https://amazingaudioplayer.com).
+V průběhu testování jsem pak pro zkrácení dlouhé chvíle poslouchal hudbu, a tak jsem se rozhodl do aplikace přidat ještě přehrávač. Ten je implementován za pomoci jQuery.
 
 ## Popis funkčnosti a návod
 
@@ -42,8 +42,7 @@ Tento textový soubor ale musí mít určitý formát. Konkrétně:
 
 * na prvním řádku se nachází celé číslo udávající počet sloupců
 * na druhém řásku se nachází celé číslo udávající počet řádků
-* následují řádky reprezentující jednotlivé řádky mapy - na každém řádku je sekvence 0 a 1 reprezentujících mrtvé (0) a živé (1) buňky (nejsou odděleny mezeramy, následují bezprostředně po sobě)
-* jednotlivé řádky mapy odpovídají řádkům nul a jedniček v souboru
+* následují řádky reprezentující jednotlivé řádky mapy - na každém je sekvence 0 a 1 reprezentujících mrtvé (0) a živé (1) buňky (nejsou odděleny mezeramy, následují bezprostředně po sobě)
 
 Níže přikládáme několik ukázkových souborů:
 
@@ -65,4 +64,9 @@ Minimální rychlost je 0,1 (1 snímek za 10 sekund), maximální pak 30 kroků/
 
 ### Přehrávač
 
-Zpříjemněte si své "buněčné hrátky" trochou hudby. Jako podkresová hudba je k dispozici několik skladeb! SStačí si vybrat v přehrávači po sekcí Nastavení. Je možné přehrávání pauzovat, skočit na následující/předchozí skladbu, nechat hudbu hrát v nekonečné smyčce...
+Zpříjemněte si své "buněčné hrátky" trochou hudby. Jako podkresová hudba je k dispozici několik skladeb! Stačí si vybrat v přehrávači po sekcí Nastavení. Je možné přehrávání pauzovat, vybrat skladbu ze seznamu atd. Hudba automaticky hraje v nekonečné smyčce.
+
+### Zajímavosti
+
+* aplikace může fungovat offline díky implementaci App Cache Manifestu
+* datum v patičce je generováno pomocí JavaScriptu - už žádný neaktuální rok u copyrightu! :)
